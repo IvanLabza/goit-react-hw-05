@@ -2,7 +2,7 @@ import { useState } from "react";
 import reactLogo from "./assets/react.svg";
 import viteLogo from "/vite.svg";
 import css from "./App.module.css";
-import api from "./servise/api";
+import api from "./service/service";
 
 function App() {
   const [count, setCount] = useState(0);
