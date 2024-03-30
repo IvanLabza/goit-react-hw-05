@@ -1,0 +1,17 @@
+.movieListContainer {
+}
+.movieList {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 30px 0;
+  list-style: circle;
+}
+.movieListItem {
+  list-style: auto;
+}
+.movieLink {
+  font-family: sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+}

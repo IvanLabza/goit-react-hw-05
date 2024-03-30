@@ -1,0 +1,17 @@
+.link {
+  font-size: 17px;
+  font-family: sans-serif;
+  font-weight: 600;
+  color: #fff;
+  background-color: black;
+  padding: 9px 17px;
+  display: inline-block;
+  border-radius: 13px;
+  transition: all 0.3s ease-in-out;
+  border: 1px solid black;
+}
+
+.link:hover {
+  color: black;
+  background-color: white;
+}
