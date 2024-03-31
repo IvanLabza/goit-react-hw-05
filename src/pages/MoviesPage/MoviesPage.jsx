@@ -31,7 +31,7 @@ const Movies = ({}) => {
       }
     };
     fetchData();
-  }, [searchTerm, location.search]);
+  }, [searchTerm]);
 
   const onSubmit = (e) => {
     setMovies(null);
@@ -44,7 +44,7 @@ const Movies = ({}) => {
         <SearchForm onSubmit={onSubmit} />
         {loader && <Loader />}
         {movies !== null && Array.isArray(movies) && (
-          <MovieList topMovie={movies} />
+          <MovieList movies={movies} />
         )}
       </div>
     </div>

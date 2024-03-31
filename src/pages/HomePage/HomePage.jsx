@@ -5,13 +5,13 @@ import toast, { Toaster } from "react-hot-toast";
 import { useLocation } from "react-router-dom";
 
 const HomePage = ({ setItem }) => {
-  const [topMovie, setTopMovie] = useState(null);
+  const [movies, setmovies] = useState(null);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const data = await apiTrend();
-        setTopMovie(data);
+        setmovies(data);
       } catch {
         toast.error("This didn't work.", { duration: 1500 });
       }
@@ -23,13 +23,10 @@ const HomePage = ({ setItem }) => {
     textAlight: "center",
   };
 
-
   return (
     <div className="wrapper">
       <h1 style={head}>Home Page</h1>
-      {Array.isArray(topMovie) && (
-        <MovieList topMovie={topMovie} />
-      )}
+      {Array.isArray(movies) && <MovieList movies={movies} />}
       <Toaster gutter={1} position="top-right" reverseOrder={false} />
     </div>
   );

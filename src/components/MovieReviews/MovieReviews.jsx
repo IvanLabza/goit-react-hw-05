@@ -16,7 +16,7 @@ const MovieReviews = () => {
       }
     };
     fetchData();
-  }, []);
+  }, [movieId]);
 
   return (
     <ul>
